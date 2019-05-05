@@ -7,4 +7,4 @@ services:
       - ./output:/tmp/cem-agent-results
       - ./gym_overrides/dql.py:/root/gym/examples/agents/dql.py
       - ./gym_overrides/random_agent.py:/root/gym/examples/agents/random_agent.py
-      - ./gym_overrides/car_racing.py:/root/gym/envs/box2d/car_racing.py
+      - ./gym_overrides/car_racing.py:/root/gym/gym/envs/box2d/car_racing.py
