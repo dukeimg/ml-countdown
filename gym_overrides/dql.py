@@ -221,7 +221,7 @@ while True:
     if n % 1 == 0:
         print("episode:", n, "iters", iters, "total reward:", totalreward, "eps:", eps, "avg reward (last 100):", totalrewards[max(0, n-100):(n+1)].mean())
     if n % 10 == 0:
-        model.model.save('race-car.h5')
+        model.model.save('/var/www/html/model.h5')
     n = n + 1
 
 print("avg reward for last 100 episodes:", totalrewards[-100:].mean())
