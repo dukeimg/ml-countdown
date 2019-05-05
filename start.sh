@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+service apache2 start
+
 Xvfb :0 -screen 0 1280x720x24 & export DISPLAY=:0
 
 # Run detached gym

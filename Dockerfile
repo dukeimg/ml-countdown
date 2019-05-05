@@ -24,5 +24,12 @@ RUN pip3 install matplotlib opencv-python keras tensorflow
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y python3-tk
 
+# Run http server
+RUN apt-get update && apt-get install -y apache2 ufw
+RUN ufw allow 'Apache'
+COPY html /var/www/html
+
 COPY start.sh /root/start.sh
 WORKDIR /root/gym
+
+EXPOSE 80
